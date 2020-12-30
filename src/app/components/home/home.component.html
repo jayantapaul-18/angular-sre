@@ -1,0 +1,57 @@
+
+
+<mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1"
+  min="1"
+  max="100"
+></mat-slider>
+
+<div style="padding: 13px">
+  <mat-spinner color="warn" *ngIf="message.length === 0"></mat-spinner>
+
+  <mat-card-header>
+    <mat-card-title>Application: {{ message.application }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-header>
+    <mat-card-title>Healthcheck: {{ message.message }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-header>
+    <mat-card-title>Status: {{ message.status }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-header>
+    <mat-card-title>UpTime: {{ message.upTime }}</mat-card-title>
+  </mat-card-header>
+
+  <button class="md-raised">Button</button>
+
+  <mat-card-actions>
+    <button mat-button color="primary">Re Check</button>
+  </mat-card-actions>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Primary</button>
+      |
+      <button mat-raised-button color="accent">Accent</button>
+      |
+      <button mat-raised-button color="primary">Warn</button>
+      |
+
+      <a
+        mat-raised-button
+        href="http://localhost:3003/app/v1/healthz"
+        target="_blank"
+        >Link</a
+      >
+    </div>
+  </section>
+
+  <div>
+    <button (click)="firstPage()" mat-button>First</button>
+    <button (click)="previousPage()" mat-button>Previous</button>
+    <button (click)="nextPage()" mat-button>Next</button>
+    <button (click)="lastPage()" mat-button>Last</button>
+  </div>
+</div>

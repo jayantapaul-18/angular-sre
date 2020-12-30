@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  envName: 'local',
+  BACKEND_URI: 'http://localhost:3003',
+  HEALTHZ_URL:'/app/v1/healthz'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

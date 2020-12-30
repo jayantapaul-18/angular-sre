@@ -32,10 +32,3 @@
   text-shadow: 0px 1px 0px #528ecc;
   outline: 0;
 }
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-mat-slider {
-  width: 300px;
-}
